@@ -232,7 +232,6 @@ def main_inference(model_path, file_path, span_column, label_column=None, tag_fo
         tag_format
     )
 
-    # Load model and tokenizer
     print("Loading model and tokenizer...")
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print(f"Using device: {device}")
@@ -327,8 +326,8 @@ def main_inference(model_path, file_path, span_column, label_column=None, tag_fo
 
 
 
-MODEL_PATH = "/content/best_propaganda_model.pth"  # Path to trained model
-FILE_PATH = "/content/results2.csv"  # Path to test dataset
+MODEL_PATH = "best_propaganda_model.pth"  # Path to trained model
+FILE_PATH = "results.csv"  # Path to test dataset
 SPAN_COLUMN = "predicted_span"  # Column containing text spans
 LABEL_COLUMN = "Label"  # Column containing gold labels
 
